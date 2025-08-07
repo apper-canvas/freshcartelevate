@@ -1,14 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import SearchBar from "@/components/molecules/SearchBar";
 import Button from "@/components/atoms/Button";
 import ApperIcon from "@/components/ApperIcon";
+import { AuthContext } from "../../App";
 
 const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
-  const navigate = useNavigate();
+const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { logout } = useContext(AuthContext);
+  const userState = useSelector((state) => state.user);
+  const isAuthenticated = userState?.isAuthenticated || false;
   const handleSearch = (query) => {
     onSearch(query);
     if (query.trim()) {
@@ -76,7 +80,16 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
                 className="flex items-center gap-2"
               >
                 <ApperIcon name="Settings" size={18} />
-                Settings
+Settings
+              </Button>
+
+              <Button
+                variant="ghost"
+                onClick={logout}
+                className="flex items-center gap-2"
+              >
+                <ApperIcon name="LogOut" size={18} />
+                Logout
               </Button>
 
               <motion.div className="relative">
@@ -203,8 +216,20 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
                 }}
                 className="w-full justify-start gap-3 h-12"
               >
-                <ApperIcon name="Settings" size={18} />
+<ApperIcon name="Settings" size={18} />
                 Settings
+              </Button>
+
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  logout();
+                  toggleMenu();
+                }}
+                className="w-full justify-start gap-3 h-12"
+              >
+                <ApperIcon name="LogOut" size={18} />
+                Logout
               </Button>
             </div>
           </motion.div>

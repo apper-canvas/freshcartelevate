@@ -25,7 +25,7 @@ const cartService = {
     return getStoredCart();
   },
 
-  async addItem(item) {
+async addItem(item) {
     await delay(300);
     const cart = getStoredCart();
     const existingIndex = cart.findIndex(cartItem => cartItem.productId === item.productId);

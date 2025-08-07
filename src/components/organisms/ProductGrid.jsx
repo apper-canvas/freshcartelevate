@@ -25,7 +25,7 @@ const ProductGrid = ({
       setLoading(true);
       setError("");
       
-      const productsData = await productService.getAll();
+const productsData = await productService.getAll();
       setProducts(productsData);
       
       // Extract unique categories

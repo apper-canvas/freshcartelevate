@@ -167,7 +167,7 @@ const ProductCard = ({ product, onAddToCart, className = "" }) => {
 
         <CardContent className="p-4">
           <div className="space-y-2 mb-4">
-            <h3 className="font-semibold text-gray-900 font-display line-clamp-2 group-hover:text-primary transition-colors duration-200">
+<h3 className="font-semibold text-gray-900 font-display line-clamp-2 group-hover:text-primary transition-colors duration-200">
               {product.name}
             </h3>
             <p className="text-sm text-gray-600 font-body">
