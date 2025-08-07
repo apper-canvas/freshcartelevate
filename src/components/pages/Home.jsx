@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProductGrid from "@/components/organisms/ProductGrid";
 import QuickReorder from "@/components/organisms/QuickReorder";
+import PromoBannerCarousel from "@/components/organisms/PromoBannerCarousel";
 import Button from "@/components/atoms/Button";
 import ApperIcon from "@/components/ApperIcon";
 import cartService from "@/services/api/cartService";
@@ -52,7 +53,7 @@ const Home = ({ onCartUpdate }) => {
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             Get farm-fresh produce and quality groceries delivered to your door in under 2 hours
-          </motion.p>
+</motion.p>
           
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
@@ -75,7 +76,17 @@ const Home = ({ onCartUpdate }) => {
           </motion.div>
         </motion.div>
 
-{/* Quick Reorder Carousel Section */}
+        {/* Promotional Banner Carousel Section */}
+        <motion.section
+          className="w-full"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          <PromoBannerCarousel />
+        </motion.section>
+
+        {/* Quick Reorder Carousel Section */}
         <motion.section
           className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8"
           initial={{ opacity: 0, y: 20 }}
