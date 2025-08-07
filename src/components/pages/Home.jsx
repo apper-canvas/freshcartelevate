@@ -75,8 +75,9 @@ const Home = ({ onCartUpdate }) => {
           </motion.div>
         </motion.div>
 
-        {/* Quick Reorder Section */}
-<motion.section
+{/* Quick Reorder Carousel Section */}
+        <motion.section
+          className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 lg:p-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}

@@ -93,7 +93,7 @@ const QuickReorder = ({ onAddToCart, className = "" }) => {
     );
   }
 
-  return (
+return (
     <motion.div
       className={`space-y-4 ${className}`}
       initial={{ opacity: 0, y: 20 }}
@@ -104,38 +104,85 @@ const QuickReorder = ({ onAddToCart, className = "" }) => {
         <div className="flex items-center gap-2">
           <ApperIcon name="RotateCcw" size={20} className="text-primary" />
           <h2 className="text-xl font-bold text-gray-900 font-display">Quick Reorder</h2>
+          <div className="hidden sm:flex items-center gap-1 px-2 py-1 bg-accent/10 text-accent text-xs rounded-full font-medium">
+            <ApperIcon name="Star" size={12} />
+            Your favorites
+          </div>
         </div>
         <Button
           variant="ghost"
           size="small"
           onClick={loadReorderItems}
-          className="text-primary"
+          className="text-primary hover:bg-primary/5"
         >
           <ApperIcon name="RefreshCw" size={16} className="mr-1" />
-          Refresh
+          <span className="hidden sm:inline">Refresh</span>
         </Button>
       </div>
 
+      {/* Carousel Container */}
       <motion.div
-        className="grid grid-cols-2 lg:grid-cols-3 gap-4"
+        className="relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.4 }}
       >
-        {reorderItems.map((product, index) => (
-          <motion.div
-            key={product.Id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
-          >
-            <ProductCard
-              product={product}
-              onAddToCart={onAddToCart}
-              className="h-full"
-            />
-          </motion.div>
-        ))}
+        {/* Scroll Hint */}
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-sm text-gray-600 font-body">
+            Swipe to see more frequently purchased items
+          </p>
+          <div className="flex gap-1">
+            {Array.from({ length: Math.ceil(reorderItems.length / 2) }).map((_, i) => (
+              <div key={i} className="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            ))}
+          </div>
+        </div>
+
+        {/* Carousel */}
+        <div className="quick-reorder-carousel overflow-x-auto pb-4">
+          <div className="flex gap-4" style={{ width: `${reorderItems.length * 180}px` }}>
+            {reorderItems.map((product, index) => (
+              <motion.div
+                key={product.Id}
+                className="flex-none w-44"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.05 }}
+              >
+                <div className="relative">
+                  {/* Frequency Badge */}
+                  <div className="absolute -top-2 -right-2 z-10 bg-gradient-to-r from-success to-primary text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
+                    #{ index + 1 }
+                  </div>
+                  <ProductCard
+                    product={product}
+                    onAddToCart={onAddToCart}
+                    className="h-full carousel-card"
+                  />
+                </div>
+              </motion.div>
+            ))}
+            
+            {/* More Items Indicator */}
+            <motion.div
+              className="flex-none w-44 flex items-center justify-center"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: reorderItems.length * 0.05 }}
+            >
+              <div className="bg-gradient-to-br from-primary/5 to-success/5 rounded-xl border-2 border-dashed border-primary/20 h-full w-full flex flex-col items-center justify-center text-center p-4 cursor-pointer hover:border-primary/40 hover:bg-primary/10 transition-all duration-200">
+                <ApperIcon name="Plus" size={24} className="text-primary mb-2" />
+                <p className="text-sm font-medium text-gray-700 mb-1">Explore More</p>
+                <p className="text-xs text-gray-500">Browse all products</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Gradient Overlays for Scroll Indication */}
+        <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-white to-transparent pointer-events-none z-10"></div>
+        <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-white to-transparent pointer-events-none z-10"></div>
       </motion.div>
     </motion.div>
   );
