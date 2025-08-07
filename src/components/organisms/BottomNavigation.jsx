@@ -7,7 +7,7 @@ const BottomNavigation = ({ cartCount = 0, onCartClick, className = "" }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const navItems = [
+const navItems = [
     {
       id: "home",
       label: "Home",
@@ -36,6 +36,13 @@ const BottomNavigation = ({ cartCount = 0, onCartClick, className = "" }) => {
       icon: "Package",
       path: "/orders",
       onClick: () => navigate("/orders")
+    },
+    {
+      id: "settings",
+      label: "Settings",
+      icon: "Settings",
+      path: "/settings",
+      onClick: () => navigate("/settings")
     }
   ];
 

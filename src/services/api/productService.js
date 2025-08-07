@@ -29,6 +29,26 @@ const productService = {
     return getStoredProducts();
   },
 
+  async getAllWithInventory() {
+    await delay(350);
+    const products = getStoredProducts();
+    
+    try {
+      // Try to get inventory from favorite stores
+      const storeService = await import('./storeService.js').then(m => m.default);
+      const productIds = products.map(p => p.Id);
+      const inventory = await storeService.getMultiStoreInventory(productIds);
+      
+      return products.map(product => ({
+        ...product,
+        storeInventory: inventory[product.Id] || []
+      }));
+    } catch (error) {
+      // Return products without inventory if store service fails
+      return products;
+    }
+  },
+
   async getById(id) {
     await delay(200);
     const products = getStoredProducts();

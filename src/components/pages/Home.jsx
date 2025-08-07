@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import ProductGrid from "@/components/organisms/ProductGrid";
 import QuickReorder from "@/components/organisms/QuickReorder";
 import Button from "@/components/atoms/Button";
 import ApperIcon from "@/components/ApperIcon";
 import cartService from "@/services/api/cartService";
-
+import storeService from "@/services/api/storeService";
 const Home = ({ onCartUpdate }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -76,7 +76,7 @@ const Home = ({ onCartUpdate }) => {
         </motion.div>
 
         {/* Quick Reorder Section */}
-        <motion.section
+<motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}

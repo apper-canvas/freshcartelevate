@@ -8,6 +8,7 @@ import Home from "@/components/pages/Home";
 import Search from "@/components/pages/Search";
 import Checkout from "@/components/pages/Checkout";
 import Orders from "@/components/pages/Orders";
+import Settings from "@/components/pages/Settings";
 import cartService from "@/services/api/cartService";
 
 const App = () => {
@@ -62,9 +63,13 @@ const App = () => {
               path="/checkout" 
               element={<Checkout />} 
             />
-            <Route 
+<Route 
               path="/orders" 
               element={<Orders />} 
+            />
+            <Route 
+              path="/settings" 
+              element={<Settings />} 
             />
           </Routes>
         </main>

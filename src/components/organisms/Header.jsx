@@ -50,7 +50,7 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
               <SearchBar onSearch={handleSearch} />
             </div>
 
-            {/* Desktop Navigation */}
+{/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-4">
               <Button
                 variant="ghost"
@@ -68,6 +68,15 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
               >
                 <ApperIcon name="Package" size={18} />
                 Orders
+              </Button>
+
+              <Button
+                variant="ghost"
+                onClick={() => navigate("/settings")}
+                className="flex items-center gap-2"
+              >
+                <ApperIcon name="Settings" size={18} />
+                Settings
               </Button>
 
               <motion.div className="relative">
@@ -161,7 +170,7 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
               </div>
             </div>
 
-            <div className="p-4 space-y-2">
+<div className="p-4 space-y-2">
               <Button
                 variant="ghost"
                 onClick={() => {
@@ -184,6 +193,18 @@ const Header = ({ cartCount = 0, onSearch, onCartClick, className = "" }) => {
               >
                 <ApperIcon name="Package" size={18} />
                 Orders
+              </Button>
+
+              <Button
+                variant="ghost"
+                onClick={() => {
+                  navigate("/settings");
+                  toggleMenu();
+                }}
+                className="w-full justify-start gap-3 h-12"
+              >
+                <ApperIcon name="Settings" size={18} />
+                Settings
               </Button>
             </div>
           </motion.div>

@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "name": "FreshCart Downtown",
+    "address": "123 Main Street, Downtown",
+    "distance": 1.2,
+    "hours": "7AM - 11PM",
+    "isOpen": true,
+    "inventoryCount": 245,
+    "phone": "(555) 123-4567",
+    "features": ["Organic", "Deli", "Pharmacy"]
+  },
+  {
+    "Id": 2,
+    "name": "FreshCart Westside",
+    "address": "456 Oak Avenue, Westside",
+    "distance": 2.8,
+    "hours": "6AM - 12AM",
+    "isOpen": true,
+    "inventoryCount": 312,
+    "phone": "(555) 234-5678",
+    "features": ["24/7", "Gas Station", "Bakery"]
+  },
+  {
+    "Id": 3,
+    "name": "FreshCart Riverside",
+    "address": "789 River Road, Riverside",
+    "distance": 4.1,
+    "hours": "8AM - 10PM",
+    "isOpen": true,
+    "inventoryCount": 198,
+    "phone": "(555) 345-6789",
+    "features": ["Organic", "Local Produce", "Wine"]
+  },
+  {
+    "Id": 4,
+    "name": "FreshCart Northgate",
+    "address": "321 Pine Street, Northgate",
+    "distance": 3.7,
+    "hours": "7AM - 9PM",
+    "isOpen": false,
+    "inventoryCount": 267,
+    "phone": "(555) 456-7890",
+    "features": ["Family-friendly", "Deli", "Florist"]
+  },
+  {
+    "Id": 5,
+    "name": "FreshCart Express",
+    "address": "654 Quick Lane, Express District",
+    "distance": 0.9,
+    "hours": "24/7",
+    "isOpen": true,
+    "inventoryCount": 156,
+    "phone": "(555) 567-8901",
+    "features": ["24/7", "Express", "Self-checkout"]
+  },
+  {
+    "Id": 6,
+    "name": "FreshCart Suburban",
+    "address": "987 Family Way, Suburban Plaza",
+    "distance": 5.2,
+    "hours": "6AM - 11PM",
+    "isOpen": true,
+    "inventoryCount": 387,
+    "phone": "(555) 678-9012",
+    "features": ["Large Selection", "Parking", "Pharmacy"]
+  },
+  {
+    "Id": 7,
+    "name": "FreshCart University",
+    "address": "147 College Blvd, University District",
+    "distance": 2.3,
+    "hours": "7AM - 1AM",
+    "isOpen": true,
+    "inventoryCount": 203,
+    "phone": "(555) 789-0123",
+    "features": ["Student Discounts", "Late Hours", "Grab & Go"]
+  },
+  {
+    "Id": 8,
+    "name": "FreshCart Hillside",
+    "address": "258 Hill Street, Hillside Heights",
+    "distance": 6.8,
+    "hours": "8AM - 9PM",
+    "isOpen": false,
+    "inventoryCount": 221,
+    "phone": "(555) 890-1234",
+    "features": ["Scenic Views", "Organic", "Local"]
+  }
+]

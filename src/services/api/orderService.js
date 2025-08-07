@@ -20,7 +20,6 @@ const saveOrders = (orders) => {
     console.warn("Failed to save orders to localStorage:", error);
   }
 };
-
 const orderService = {
   async getAll() {
     await delay(350);
