@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import ProductRecommendations from "@/components/organisms/ProductRecommendations";
+import productService from "@/services/api/productService";
+import cartService from "@/services/api/cartService";
+import ApperIcon from "@/components/ApperIcon";
 import CartItem from "@/components/molecules/CartItem";
-import Button from "@/components/atoms/Button";
 import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
-import ApperIcon from "@/components/ApperIcon";
-import cartService from "@/services/api/cartService";
-
+import Checkout from "@/components/pages/Checkout";
+import Button from "@/components/atoms/Button";
 const Cart = ({ 
   isOpen, 
   onClose, 
@@ -17,9 +19,9 @@ const Cart = ({
 }) => {
   const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
-  const [loading, setLoading] = useState(true);
+const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-
+  const [recommendations, setRecommendations] = useState([]);
   const loadCart = async () => {
     try {
       setLoading(true);
@@ -36,9 +38,23 @@ const Cart = ({
   useEffect(() => {
     if (isOpen) {
       loadCart();
-    }
+}
   }, [isOpen]);
 
+  const loadRecommendations = async () => {
+    if (cartItems.length > 0) {
+      try {
+        const recs = await productService.getRecommendations(cartItems);
+        setRecommendations(recs);
+      } catch (err) {
+        console.error("Failed to load recommendations:", err);
+      }
+    }
+  };
+
+  useEffect(() => {
+    loadRecommendations();
+  }, [cartItems]);
   const handleUpdateQuantity = async (productId, quantity) => {
     try {
       await cartService.updateQuantity(productId, quantity);
@@ -76,11 +92,14 @@ const Cart = ({
     return 4.99;
   };
 
-  const subtotal = calculateTotal();
+const subtotal = calculateTotal();
   const tax = calculateTax(subtotal);
   const deliveryFee = calculateDeliveryFee();
   const total = subtotal + tax + deliveryFee;
 
+  const handleAddToCartFromRecommendations = async (product) => {
+    await onUpdateCart(product.Id, 1);
+  };
   if (!isOpen) return null;
 
   return (
@@ -148,8 +167,16 @@ const Cart = ({
                   ))}
                 </AnimatePresence>
               </div>
-            )}
+)}
           </div>
+
+          {/* Product Recommendations */}
+          {cartItems.length > 0 && recommendations.length > 0 && (
+            <ProductRecommendations
+              recommendations={recommendations}
+              onAddToCart={handleAddToCartFromRecommendations}
+            />
+          )}
 
           {/* Cart Footer */}
           {cartItems.length > 0 && (
