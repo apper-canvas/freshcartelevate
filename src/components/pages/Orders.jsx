@@ -9,9 +9,9 @@ import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
 import ApperIcon from "@/components/ApperIcon";
+import OrderTracking from "@/components/organisms/OrderTracking";
 import orderService from "@/services/api/orderService";
 import { toast } from "react-toastify";
-
 const Orders = () => {
   const location = useLocation();
   const newOrderId = location.state?.newOrderId;
@@ -232,12 +232,15 @@ const Orders = () => {
 
                     {/* Expanded Order Details */}
                     {expandedOrders.has(order.Id) && (
-                      <motion.div
+<motion.div
                         className="mt-6 pt-6 border-t space-y-4"
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         transition={{ duration: 0.3 }}
                       >
+                        {/* Order Tracking Component */}
+                        <OrderTracking order={order} />
+
                         {/* Order Items */}
                         {order.items && order.items.length > 0 && (
                           <div className="space-y-2">

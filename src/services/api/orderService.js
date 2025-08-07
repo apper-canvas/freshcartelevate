@@ -1,7 +1,29 @@
 import ordersData from "@/services/mockData/orders.json";
 
 const STORAGE_KEY = "freshcart_orders";
+// Get tracking information for an order
+function getTrackingInfo(orderId) {
+  const order = orderService.getById(orderId);
+  if (!order) return null;
 
+  // Simulate tracking data based on order status
+  const trackingSteps = {
+    'confirmed': { step: 1, progress: 25 },
+    'preparing': { step: 2, progress: 50 },
+    'out_for_delivery': { step: 3, progress: 75 },
+    'delivered': { step: 4, progress: 100 }
+  };
+
+  return {
+    orderId,
+    status: order.status,
+    ...trackingSteps[order.status],
+    estimatedDelivery: order.deliverySlot ? 
+      new Date(`${order.deliverySlot.date}T${order.deliverySlot.time}:00`) : 
+      null,
+    lastUpdate: new Date().toISOString()
+  };
+}
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 const getStoredOrders = () => {
@@ -26,7 +48,7 @@ const orderService = {
     return getStoredOrders();
   },
 
-  async getById(id) {
+async getById(id) {
     await delay(250);
     const orders = getStoredOrders();
     const order = orders.find(o => o.Id === parseInt(id));
@@ -35,6 +57,9 @@ const orderService = {
     }
     return { ...order };
   },
+
+  // Get tracking information
+  getTrackingInfo,
 
   async create(orderData) {
     await delay(500);
