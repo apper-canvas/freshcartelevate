@@ -1,29 +1,40 @@
 import React, { forwardRef } from "react";
 import { cn } from "@/utils/cn";
 
+const variants = {
+  primary: "bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl",
+  secondary: "bg-secondary hover:bg-secondary/90 text-white shadow-lg hover:shadow-xl",
+  accent: "bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl",
+  outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
+  ghost: "text-primary hover:bg-primary/10",
+  success: "bg-success hover:bg-success/90 text-white shadow-lg hover:shadow-xl",
+  warning: "bg-warning hover:bg-warning/90 text-white shadow-lg hover:shadow-xl",
+  error: "bg-error hover:bg-error/90 text-white shadow-lg hover:shadow-xl"
+};
+
+const sizes = {
+  sm: "h-8 px-3 text-sm",
+  md: "h-10 px-4 text-base",
+  lg: "h-12 px-6 text-lg",
+  xl: "h-14 px-8 text-xl"
+};
+
 const Button = forwardRef(({ 
+  children, 
   className, 
   variant = "primary", 
-  size = "medium", 
-  children, 
+  size = "md",
+  // Extract motion props to prevent them from being passed to DOM
+  whileHover,
+  whileTap,
+  whileFocus,
+  whileInView,
+  animate,
+  initial,
+  exit,
+  transition,
   ...props 
 }, ref) => {
-  const variants = {
-    primary: "bg-gradient-to-r from-primary to-success text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]",
-    secondary: "bg-gradient-to-r from-secondary to-warning text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]",
-    accent: "bg-gradient-to-r from-accent to-warning text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]",
-    outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white bg-white shadow-md hover:shadow-lg transform hover:scale-[1.02] active:scale-[0.98]",
-    ghost: "text-primary hover:bg-primary/10 hover:text-primary transform hover:scale-[1.02] active:scale-[0.98]",
-    danger: "bg-gradient-to-r from-error to-red-600 text-white shadow-lg hover:shadow-xl transform hover:scale-[1.02] active:scale-[0.98]"
-  };
-
-  const sizes = {
-    small: "px-3 py-1.5 text-sm",
-    medium: "px-4 py-2 text-base",
-    large: "px-6 py-3 text-lg",
-    icon: "p-2"
-  };
-
   return (
     <button
       className={cn(
