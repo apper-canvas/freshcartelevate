@@ -1,0 +1,245 @@
+[
+  {
+    "Id": 1,
+    "name": "Organic Bananas",
+    "category": "Produce",
+    "price": 2.99,
+    "unit": "per bunch",
+    "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 2,
+    "name": "Fresh Strawberries",
+    "category": "Produce",
+    "price": 4.49,
+    "originalPrice": 5.99,
+    "unit": "1 lb container",
+    "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": true
+  },
+  {
+    "Id": 3,
+    "name": "Organic Milk",
+    "category": "Dairy",
+    "price": 5.29,
+    "unit": "1 gallon",
+    "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 4,
+    "name": "Free Range Eggs",
+    "category": "Dairy",
+    "price": 4.99,
+    "unit": "dozen",
+    "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 5,
+    "name": "Grass Fed Ground Beef",
+    "category": "Meat",
+    "price": 8.99,
+    "unit": "1 lb",
+    "image": "https://images.unsplash.com/photo-1588347818131-e4a5b5e4621e?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 6,
+    "name": "Atlantic Salmon Fillet",
+    "category": "Meat",
+    "price": 12.99,
+    "unit": "1 lb",
+    "image": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=400&h=300&fit=crop&crop=center",
+    "inStock": false,
+    "onSale": false
+  },
+  {
+    "Id": 7,
+    "name": "Whole Grain Bread",
+    "category": "Bakery",
+    "price": 3.49,
+    "unit": "1 loaf",
+    "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 8,
+    "name": "Fresh Croissants",
+    "category": "Bakery",
+    "price": 6.99,
+    "unit": "pack of 6",
+    "image": "https://images.unsplash.com/photo-1555507036-ab794f4d6e42?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 9,
+    "name": "Organic Pasta",
+    "category": "Pantry",
+    "price": 2.99,
+    "originalPrice": 3.49,
+    "unit": "1 lb box",
+    "image": "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": true
+  },
+  {
+    "Id": 10,
+    "name": "Extra Virgin Olive Oil",
+    "category": "Pantry",
+    "price": 8.99,
+    "unit": "500ml bottle",
+    "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 11,
+    "name": "Greek Yogurt",
+    "category": "Dairy",
+    "price": 5.49,
+    "unit": "32oz container",
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 12,
+    "name": "Fresh Avocados",
+    "category": "Produce",
+    "price": 1.99,
+    "unit": "each",
+    "image": "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 13,
+    "name": "Roma Tomatoes",
+    "category": "Produce",
+    "price": 2.49,
+    "unit": "per lb",
+    "image": "https://images.unsplash.com/photo-1546470427-e26264b6c2a9?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 14,
+    "name": "Organic Spinach",
+    "category": "Produce",
+    "price": 3.99,
+    "unit": "5oz bag",
+    "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 15,
+    "name": "Frozen Berries Mix",
+    "category": "Frozen",
+    "price": 7.99,
+    "unit": "2 lb bag",
+    "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 16,
+    "name": "Vanilla Ice Cream",
+    "category": "Frozen",
+    "price": 4.99,
+    "unit": "1 pint",
+    "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 17,
+    "name": "Sparkling Water",
+    "category": "Beverages",
+    "price": 4.99,
+    "originalPrice": 6.49,
+    "unit": "12-pack cans",
+    "image": "https://images.unsplash.com/photo-1567103472667-6898f3e64464?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": true
+  },
+  {
+    "Id": 18,
+    "name": "Organic Coffee Beans",
+    "category": "Beverages",
+    "price": 12.99,
+    "unit": "1 lb bag",
+    "image": "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 19,
+    "name": "Mixed Nuts",
+    "category": "Snacks",
+    "price": 8.99,
+    "unit": "1 lb container",
+    "image": "https://images.unsplash.com/photo-1585480621279-0290bacdc1a8?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 20,
+    "name": "Organic Dark Chocolate",
+    "category": "Snacks",
+    "price": 3.99,
+    "unit": "3.5oz bar",
+    "image": "https://images.unsplash.com/photo-1511381939415-e44015466834?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 21,
+    "name": "Organic Chicken Breast",
+    "category": "Meat",
+    "price": 9.99,
+    "unit": "1 lb",
+    "image": "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 22,
+    "name": "Sharp Cheddar Cheese",
+    "category": "Dairy",
+    "price": 4.99,
+    "unit": "8oz block",
+    "image": "https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 23,
+    "name": "Sourdough Bread",
+    "category": "Bakery",
+    "price": 4.49,
+    "unit": "1 loaf",
+    "image": "https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  },
+  {
+    "Id": 24,
+    "name": "Jasmine Rice",
+    "category": "Pantry",
+    "price": 5.99,
+    "unit": "2 lb bag",
+    "image": "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=400&h=300&fit=crop&crop=center",
+    "inStock": true,
+    "onSale": false
+  }
+]

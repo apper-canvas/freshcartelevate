@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'react-toastify/dist/ReactToastify.css';
+
+/* Custom toast positioning and styling */
+.Toastify__toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  width: auto;
+  max-width: 350px;
+}
+
+.Toastify__toast {
+  min-height: 60px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #EF5350 0%, #F44336 100%);
+  color: white;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #29B6F6 0%, #42A5F5 100%);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.7);
+  height: 3px;
+}
+
+/* Animation enhancements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Product card hover effects */
+.product-card {
+  transition: all 0.2s ease-out;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(45, 111, 62, 0.12);
+}
+
+/* Cart floating button */
+.cart-floating {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 50;
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.25);
+}
+
+/* Mobile-first responsive adjustments */
+@media (max-width: 768px) {
+  .cart-floating {
+    bottom: 80px;
+    right: 16px;
+  }
+}
+
+/* Category pill styling */
+.category-pill {
+  transition: all 0.2s ease-out;
+  border: 2px solid transparent;
+}
+
+.category-pill.active {
+  background: linear-gradient(135deg, #2D6F3E 0%, #4CAF50 100%);
+  color: white;
+  transform: scale(1.02);
+}
+
+.category-pill:hover:not(.active) {
+  border-color: #2D6F3E;
+  transform: translateY(-1px);
+}
+
+/* Delivery slot styling */
+.delivery-slot {
+  transition: all 0.2s ease-out;
+  border: 2px solid #E5E7EB;
+}
+
+.delivery-slot.available:hover {
+  border-color: #2D6F3E;
+  background: linear-gradient(135deg, #F8FAF5 0%, #E8F5E8 100%);
+}
+
+.delivery-slot.selected {
+  background: linear-gradient(135deg, #2D6F3E 0%, #4CAF50 100%);
+  color: white;
+  border-color: #2D6F3E;
+}
+
+/* Bottom navigation styling */
+.bottom-nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(45, 111, 62, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D6F3E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1F4E28;
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "Id": 1,
+    "items": [
+      {
+        "productId": 1,
+        "name": "Organic Bananas",
+        "price": 2.99,
+        "quantity": 2,
+        "unit": "per bunch",
+        "image": "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=400&h=300&fit=crop&crop=center"
+      },
+      {
+        "productId": 3,
+        "name": "Organic Milk",
+        "price": 5.29,
+        "quantity": 1,
+        "unit": "1 gallon",
+        "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=400&h=300&fit=crop&crop=center"
+      },
+      {
+        "productId": 7,
+        "name": "Whole Grain Bread",
+        "price": 3.49,
+        "quantity": 1,
+        "unit": "1 loaf",
+        "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop&crop=center"
+      }
+    ],
+    "subtotal": 14.76,
+    "tax": 1.18,
+    "deliveryFee": 4.99,
+    "total": 20.93,
+    "deliverySlot": {
+      "date": "2024-01-19",
+      "time": "14:00"
+    },
+    "deliveryAddress": {
+      "street": "123 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    },
+    "status": "delivered",
+    "createdAt": "2024-01-18T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "items": [
+      {
+        "productId": 2,
+        "name": "Fresh Strawberries",
+        "price": 4.49,
+        "quantity": 2,
+        "unit": "1 lb container",
+        "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400&h=300&fit=crop&crop=center"
+      },
+      {
+        "productId": 11,
+        "name": "Greek Yogurt",
+        "price": 5.49,
+        "quantity": 1,
+        "unit": "32oz container",
+        "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop&crop=center"
+      }
+    ],
+    "subtotal": 14.47,
+    "tax": 1.16,
+    "deliveryFee": 4.99,
+    "total": 20.62,
+    "deliverySlot": {
+      "date": "2024-01-17",
+      "time": "11:00"
+    },
+    "deliveryAddress": {
+      "street": "123 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    },
+    "status": "delivered",
+    "createdAt": "2024-01-16T14:20:00Z"
+  },
+  {
+    "Id": 3,
+    "items": [
+      {
+        "productId": 5,
+        "name": "Grass Fed Ground Beef",
+        "price": 8.99,
+        "quantity": 1,
+        "unit": "1 lb",
+        "image": "https://images.unsplash.com/photo-1588347818131-e4a5b5e4621e?w=400&h=300&fit=crop&crop=center"
+      },
+      {
+        "productId": 9,
+        "name": "Organic Pasta",
+        "price": 2.99,
+        "quantity": 2,
+        "unit": "1 lb box",
+        "image": "https://images.unsplash.com/photo-1551892374-ecf8754cf8b0?w=400&h=300&fit=crop&crop=center"
+      },
+      {
+        "productId": 10,
+        "name": "Extra Virgin Olive Oil",
+        "price": 8.99,
+        "quantity": 1,
+        "unit": "500ml bottle",
+        "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=300&fit=crop&crop=center"
+      }
+    ],
+    "subtotal": 23.96,
+    "tax": 1.92,
+    "deliveryFee": 4.99,
+    "total": 30.87,
+    "deliverySlot": {
+      "date": "2024-01-15",
+      "time": "16:00"
+    },
+    "deliveryAddress": {
+      "street": "123 Main Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94102"
+    },
+    "status": "delivered",
+    "createdAt": "2024-01-14T16:45:00Z"
+  }
+]

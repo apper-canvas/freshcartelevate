@@ -1,0 +1,212 @@
+[
+  {
+    "Id": 1,
+    "date": "2024-01-20",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 2,
+    "date": "2024-01-20",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 3,
+    "date": "2024-01-20",
+    "time": "14:00",
+    "available": false
+  },
+  {
+    "Id": 4,
+    "date": "2024-01-20",
+    "time": "16:00",
+    "available": true
+  },
+  {
+    "Id": 5,
+    "date": "2024-01-20",
+    "time": "18:00",
+    "available": true
+  },
+  {
+    "Id": 6,
+    "date": "2024-01-21",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 7,
+    "date": "2024-01-21",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 8,
+    "date": "2024-01-21",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 9,
+    "date": "2024-01-21",
+    "time": "16:00",
+    "available": false
+  },
+  {
+    "Id": 10,
+    "date": "2024-01-21",
+    "time": "18:00",
+    "available": true
+  },
+  {
+    "Id": 11,
+    "date": "2024-01-22",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 12,
+    "date": "2024-01-22",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 13,
+    "date": "2024-01-22",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 14,
+    "date": "2024-01-22",
+    "time": "16:00",
+    "available": true
+  },
+  {
+    "Id": 15,
+    "date": "2024-01-22",
+    "time": "18:00",
+    "available": true
+  },
+  {
+    "Id": 16,
+    "date": "2024-01-23",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 17,
+    "date": "2024-01-23",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 18,
+    "date": "2024-01-23",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 19,
+    "date": "2024-01-23",
+    "time": "16:00",
+    "available": true
+  },
+  {
+    "Id": 20,
+    "date": "2024-01-23",
+    "time": "18:00",
+    "available": false
+  },
+  {
+    "Id": 21,
+    "date": "2024-01-24",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 22,
+    "date": "2024-01-24",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 23,
+    "date": "2024-01-24",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 24,
+    "date": "2024-01-24",
+    "time": "16:00",
+    "available": true
+  },
+  {
+    "Id": 25,
+    "date": "2024-01-24",
+    "time": "18:00",
+    "available": true
+  },
+  {
+    "Id": 26,
+    "date": "2024-01-25",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 27,
+    "date": "2024-01-25",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 28,
+    "date": "2024-01-25",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 29,
+    "date": "2024-01-25",
+    "time": "16:00",
+    "available": true
+  },
+  {
+    "Id": 30,
+    "date": "2024-01-25",
+    "time": "18:00",
+    "available": true
+  },
+  {
+    "Id": 31,
+    "date": "2024-01-26",
+    "time": "09:00",
+    "available": true
+  },
+  {
+    "Id": 32,
+    "date": "2024-01-26",
+    "time": "11:00",
+    "available": true
+  },
+  {
+    "Id": 33,
+    "date": "2024-01-26",
+    "time": "14:00",
+    "available": true
+  },
+  {
+    "Id": 34,
+    "date": "2024-01-26",
+    "time": "16:00",
+    "available": false
+  },
+  {
+    "Id": 35,
+    "date": "2024-01-26",
+    "time": "18:00",
+    "available": true
+  }
+]
